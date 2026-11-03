@@ -1,18 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Unreal Winter World</title>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
      <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <!--Winter-->
+       <a-entity
+        environment="preset: forest;
+                     ground: flat;
+                     groundColor: #EAF5FF;
+                     groundColor2: #FFFFFF;
+                     groundTexture: walkernoise;
+                     dressingColor: #A9C8D8;
+                     dressingAmount: 100;
+                     skyType: gradient;
+                     skyColor: #253D65;
+                     horizonColor: #AFCDE8;
+                     fog: 0.8">
+      </a-entity>
+
+       <!-- body -->
+      <a-sphere
+        position="0 0.65 -5"
+        radius="0.65"
+        color="#FFFFFF">
+      </a-sphere>
+
+      <!--  middle -->
+      <a-sphere
+        position="0 1.6 -5"
+        radius="0.5"
+        color="#FFFFFF">
+      </a-sphere>
+       <!--  head -->
+      <a-sphere
+        position="0 2.35 -5"
+        radius="0.38"
+        color="#FFFFFF">
+      </a-sphere>
+
+      <!-- left eye -->
+      <a-sphere
+        position="-0.14 2.43 -4.66"
+        radius="0.055"
+        color="#111111">
+      </a-sphere>
+
+      <!-- right eye -->
+      <a-sphere
+        position="0.14 2.43 -4.66"
+        radius="0.055"
+        color="#111111">
+      </a-sphere>
+      <!-- nose -->
+      <a-cone
+        position="0 2.3 -4.48"
+        rotation="90 0 0"
+        radius-bottom="0.11"
+        radius-top="0"
+        height="0.4"
+        color="#FF8C00">
+      </a-cone>
+
+      <!-- buttons -->
+      <a-sphere
+        position="0 1.85 -4.53"
+        radius="0.065"
+        color="#222222">
+      </a-sphere>
+
+      <a-sphere
+        position="0 1.6 -4.49"
+        radius="0.065"
+        color="#222222">
+      </a-sphere>
+
+      <a-sphere
+        position="0 1.35 -4.53"
+        radius="0.065"
+        color="#222222">
+      </a-sphere>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+
       <!-- <a-sky color="#ECECEC"></a-sky> -->
       <!-- the enviroment entity includes a sky. Choose from the presets"none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris, moon" -->
-      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+      <!-- <a-entity environment="preset: forest; dressingAmount: 500"></a-entity> -->
     </a-scene>
   </body>
 </html>
