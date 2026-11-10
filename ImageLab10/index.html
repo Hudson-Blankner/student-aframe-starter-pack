@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Unreal Summer World</title>
+    <meta charset="utf-8">
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <!-- Images -->
+      <a-assets>
+        <img id="summerSky" src="images/sky360.jpg">
+        <img id="sandTexture" src="images/sand.jpg">
+      </a-assets>
+
+      <!-- Edited 360 sky -->
+      <a-sky src="#summerSky"></a-sky>
+
+      <!-- Sandy ground -->
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="100"
+        height="100"
+        material="src: #sandTexture; repeat: 40 40; roughness: 1">
+      </a-plane>
+      <!-- Lighting -->
+      <a-light
+        type="ambient"
+        color="#FFFFFF"
+        intensity="0.8">
+      </a-light>
+
+      <a-light
+        type="directional"
+        position="-3 8 5"
+        color="#FFF3D6"
+        intensity="1">
+      </a-light>
+
+      <!-- SANDCASTLE -->
+      <a-entity position="-1.8 0 -4.5">
+
+        <!-- Main wall -->
+        <a-box
+          position="0 0.4 0"
+          width="1.5"
+          height="0.8"
+          depth="1"
+          material="src: #sandTexture; roughness: 1">
+        </a-box>
+
+        <!-- Left tower -->
+        <a-cylinder
+          position="-0.8 0.6 0"
+          radius="0.35"
+          height="1.2"
+          material="src: #sandTexture; roughness: 1">
+        </a-cylinder>
+
+        <!-- Right tower -->
+        <a-cylinder
+          position="0.8 0.6 0"
+          radius="0.35"
+          height="1.2"
+          material="src: #sandTexture; roughness: 1">
+        </a-cylinder>
+
+        <!-- Tower tops -->
+        <a-cone
+          position="-0.8 1.4 0"
+          radius-bottom="0.4"
+          radius-top="0"
+          height="0.4"
+          material="src: #sandTexture; roughness: 1">
+        </a-cone>
+
+        <a-cone
+          position="0.8 1.4 0"
+          radius-bottom="0.4"
+          radius-top="0"
+          height="0.4"
+          material="src: #sandTexture; roughness: 1">
+        </a-cone>
+
+        <!-- Blocks along the top of the wall -->
+        <a-box
+          position="-0.4 0.9 0"
+          width="0.25"
+          height="0.2"
+          depth="1"
+          material="src: #sandTexture">
+        </a-box>
+
+        <a-box
+          position="0 0.9 0"
+          width="0.25"
+          height="0.2"
+          depth="1"
+          material="src: #sandTexture">
+        </a-box>
+
+        <a-box
+          position="0.4 0.9 0"
+          width="0.25"
+          height="0.2"
+          depth="1"
+          material="src: #sandTexture">
+        </a-box>
+
+        <!-- Dark entrance on the front -->
+        <a-box
+          position="0 0.25 0.51"
+          width="0.35"
+          height="0.5"
+          depth="0.02"
+          color="#735332">
+        </a-box>
+
+      </a-entity>
+
+      <!-- BEACH CHAIR -->
+      <a-entity position="1.3 0 -4" rotation="0 -50 0">
+
+        <!-- Seat -->
+        <a-box
+          position="0 0.5 0"
+          width="0.85"
+          height="0.08"
+          depth="0.85"
+          color="#26B7C9">
+        </a-box>
+
+        <!-- Reclined backrest -->
+        <a-box
+          position="0 1.05 -0.55"
+          rotation="-20 0 0"
+          width="0.85"
+          height="1.15"
+          depth="0.08"
+          color="#26B7C9">
+        </a-box>
+
+        <!-- Four legs -->
+        <a-box
+          position="-0.36 0.25 0.33"
+          width="0.07"
+          height="0.5"
+          depth="0.07"
+          color="#EEEEEE">
+        </a-box>
+
+        <a-box
+          position="0.36 0.25 0.33"
+          width="0.07"
+          height="0.5"
+          depth="0.07"
+          color="#EEEEEE">
+        </a-box>
+
+        <a-box
+          position="-0.36 0.25 -0.33"
+          width="0.07"
+          height="0.5"
+          depth="0.07"
+          color="#EEEEEE">
+        </a-box>
+
+        <a-box
+          position="0.36 0.25 -0.33"
+          width="0.07"
+          height="0.5"
+          depth="0.07"
+          color="#EEEEEE">
+        </a-box>
+
+      </a-entity>
+      <!-- UPSIDE-DOWN BUCKET -->
+      <a-entity position="-0.5 0 -3">
+
+        <!-- Narrower closed top and wider bottom -->
+        <a-cone
+          position="0 0.25 0"
+          radius-bottom="0.3"
+          radius-top="0.22"
+          height="0.5"
+          color="#FFD43B">
+        </a-cone>
+
+        <!-- Rim resting on the sand -->
+        <a-cylinder
+          position="0 0.04 0"
+          radius="0.33"
+          height="0.08"
+          color="#F2B923">
+        </a-cylinder>
+
+      </a-entity>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky color="#ECECEC"></a-sky> -->
     </a-scene>
   </body>
 </html>
