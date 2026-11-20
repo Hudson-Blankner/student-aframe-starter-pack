@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="2048" height="1024" viewBox="0 0 2048 1024">
+
+  <!-- Sky colors from the top down to the horizon -->
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282443"/>
+      <stop offset="27%" stop-color="#77658C"/>
+      <stop offset="43%" stop-color="#AC88D4"/>
+      <stop offset="51%" stop-color="#FFC58A"/>
+      <stop offset="65%" stop-color="#D68A68"/>
+      <stop offset="100%" stop-color="#945952"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2048" height="1024" fill="url(#sky)"/>
+
+  <!-- Setting sun -->
+  <circle cx="620" cy="459" r="36" fill="#FFE4AD"/>
+
+  <!-- Far mountains -->
+  <path fill="#99697C" d="
+    M 0 514
+    L 90 490 L 160 500 L 250 460 L 310 488
+    L 395 478 L 465 507 L 560 492 L 655 501
+    L 755 469 L 820 483 L 910 448 L 990 489
+    L 1090 503 L 1200 478 L 1290 496 L 1395 456
+    L 1460 475 L 1550 492 L 1640 466 L 1740 503
+    L 1850 481 L 1940 498 L 2048 514
+    L 2048 1024 L 0 1024 Z"/>
+
+  <!-- Closer ridge -->
+  <path fill="#805969" d="
+    M 0 535
+    L 130 519 L 240 532 L 380 506 L 490 522
+    L 635 517 L 780 538 L 920 512 L 1060 525
+    L 1220 506 L 1370 532 L 1510 515 L 1650 530
+    L 1780 510 L 1930 524 L 2048 535
+    L 2048 1024 L 0 1024 Z"/>
+</svg>
